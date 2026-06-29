@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "rail/flying-scotsman",
+    "title": "Flying Scotsman",
+    "category": "rail",
+    "tags": ["LNER", "steam", "A1"],
+    "excerpt": "The most famous steam locomotive in the world..."
+  },
+  {
+    "slug": "aviation/concorde",
+    "title": "Concorde",
+    "category": "aviation",
+    "tags": ["supersonic", "BA", "Air France"],
+    "excerpt": "The Anglo-French supersonic passenger airliner..."
+  }
+]
