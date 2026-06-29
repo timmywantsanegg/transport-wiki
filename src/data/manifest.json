@@ -7,6 +7,13 @@
     "excerpt": "The most famous steam locomotive in the world..."
   },
   {
+    "slug": "rail/ChooChoo",
+    "title": "Choo Choo",
+    "category": "rail",
+    "tags": ["CHOO"],
+    "excerpt": "Makes a funny noise."
+  },
+  {
     "slug": "aviation/concorde",
     "title": "Concorde",
     "category": "aviation",

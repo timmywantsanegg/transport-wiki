@@ -1,10 +1,1 @@
----
-title: Flying Scotsman
-category: rail
-tags: [LNER, steam, A1]
-excerpt: The most famous steam locomotive in the world.
----
-
-## Overview
-
-Flying Scotsman is a steam locomotive built in 1923 for the Great Northern Railway...
+vscode-userdata:/User/caches/remote-clipboard/7068bdbf-6cd0-4ea9-acad-46fc1171fd8f/08d15982-cc18-44bf-bd83-05f5b5dac16e/flying-scotsman.md
