@@ -12,6 +12,19 @@
     "status": "complete"
   },
   {
+    "slug": "maritime/ss-great-britain",
+    "title": "SS Great Britain",
+    "category": "maritime",
+    "tags": [
+      "Brunel",
+      "steamship",
+      "iron-hulled",
+      "preserved"
+    ],
+    "excerpt": "Brunel's revolutionary iron-hulled steamship, the first screw-propelled vessel to cross an ocean.",
+    "status": "complete"
+  },
+  {
     "slug": "rail/ChooChoo",
     "title": "Choo Choo",
     "category": "rail",
