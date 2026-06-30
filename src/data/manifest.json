@@ -1,23 +1,32 @@
 [
   {
-    "slug": "rail/flying-scotsman",
-    "title": "Flying Scotsman",
-    "category": "rail",
-    "tags": ["LNER", "steam", "A1"],
-    "excerpt": "The most famous steam locomotive in the world..."
+    "slug": "aviation/concorde",
+    "title": "Concorde",
+    "category": "aviation",
+    "tags": [
+      "supersonic",
+      "BA",
+      "Air France"
+    ],
+    "excerpt": "The Anglo-French supersonic passenger airliner.",
+    "status": "complete"
   },
   {
     "slug": "rail/ChooChoo",
     "title": "Choo Choo",
     "category": "rail",
-    "tags": ["CHOO"],
-    "excerpt": "Makes a funny noise."
+    "tags": [
+      "CHOO"
+    ],
+    "excerpt": "Makes a funny noise",
+    "status": "complete"
   },
   {
-    "slug": "aviation/concorde",
-    "title": "Concorde",
-    "category": "aviation",
-    "tags": ["supersonic", "BA", "Air France"],
-    "excerpt": "The Anglo-French supersonic passenger airliner..."
+    "slug": "rail/flying-scotsman",
+    "title": "flying-scotsman",
+    "category": "rail",
+    "tags": [],
+    "excerpt": "",
+    "status": "complete"
   }
 ]
