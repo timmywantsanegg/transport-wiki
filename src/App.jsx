@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ArticlePage from './components/ArticlePage';
 import CategoryPage from './components/CategoryPage';
 import Home from './components/Home';
+import SearchBar from './components/SearchBar';
 
 const categories = [
   { slug: 'rail', label: 'Rail' },
@@ -18,6 +19,7 @@ function App() {
         <Link to="/" className="wordmark">
           Terminus<span>Transport Encyclopaedia</span>
         </Link>
+        <SearchBar />
       </div>
       <div className="layout">
         <div className="sidebar">
