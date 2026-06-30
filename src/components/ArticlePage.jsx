@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import manifest from '../data/manifest.json';
 
 function ArticlePage() {
   const { category, slug } = useParams();
@@ -9,14 +10,16 @@ function ArticlePage() {
   const [title, setTitle] = useState('');
   const [loading, setLoading] = useState(true);
 
+  const meta = manifest.find(a => a.slug === `${category}/${slug}`);
+
   useEffect(() => {
+    setLoading(true);
     fetch(`/content/${category}/${slug}.md`)
       .then(res => {
         if (!res.ok) throw new Error('Article not found');
         return res.text();
       })
       .then(text => {
-        // Strip frontmatter and grab title
         const titleMatch = text.match(/^title:\s*(.+)$/m);
         if (titleMatch) setTitle(titleMatch[1]);
         const body = text.replace(/^---[\s\S]*?---/, '').trim();
@@ -29,12 +32,35 @@ function ArticlePage() {
       });
   }, [category, slug]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <div className="main"><p className="prose">Loading...</p></div>;
 
   return (
-    <div style={{ maxWidth: '740px', margin: '0 auto', padding: '2rem' }}>
-      <h1>{title}</h1>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+    <div className="main">
+      <div className="breadcrumb">
+        <Link to="/">Home</Link>
+        <span className="sep">›</span>
+        <Link to={`/${category}`} style={{ textTransform: 'capitalize' }}>{category}</Link>
+        <span className="sep">›</span>
+        {title}
+      </div>
+
+      <h1 className="article-title">{title}</h1>
+
+      {meta && (
+        <div className="article-meta">
+          <span style={{ textTransform: 'capitalize' }}>{category}</span>
+        </div>
+      )}
+
+      {meta && meta.tags && meta.tags.map(tag => (
+        <span className="tag" key={tag}>{tag}</span>
+      ))}
+
+      <hr className="divider" />
+
+      <div className="prose">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+      </div>
     </div>
   );
 }
