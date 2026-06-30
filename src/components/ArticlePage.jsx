@@ -53,4 +53,8 @@ function ArticlePage() {
 
   if (notFound) {
     return (
-      <div className
+      <div className="main">
+        <div className="not-found">
+          <h1 className="page-title">Article not found</h1>
+          <p className="page-sub">There's no entry at this address yet.</p>
+          <Link to="/" className="back-link">← Back to home</Link>
