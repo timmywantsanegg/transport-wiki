@@ -256,3 +256,62 @@ body {
   font-size: 13px;
   color: #6a8aaa;
 }
+
+.status-badge {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-left: 10px;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+.status-complete { background: #16301f; color: #6fcf8a; border: 1px solid #1f4a2c; }
+.status-stub { background: #332210; color: #f0a040; border: 1px solid #4a3214; }
+.status-draft { background: #1e2236; color: #7a9cc8; border: 1px solid #2a3050; }
+
+.prose img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid #1e3054;
+}
+.prose figcaption,
+.prose em:has(+ img),
+.img-caption {
+  font-size: 12.5px;
+  color: #6a8aaa;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+
+.toc {
+  background: #0c1628;
+  border: 1px solid #1e3054;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  float: right;
+  width: 200px;
+  margin: 0 0 1.5rem 1.5rem;
+}
+.toc-title {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #4a6890;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.toc-item {
+  display: block;
+  font-size: 12.5px;
+  color: #7a9cc8;
+  margin-bottom: 6px;
+  padding-left: 8px;
+  border-left: 1px solid #1e3054;
+  text-decoration: none;
+}
+.toc-item:hover { color: #f0a040; border-left-color: #f0a040; }

@@ -1,18 +1,15 @@
 import manifest from '../data/manifest.json';
 
-// Builds a lookup: "flying scotsman" -> "rail/flying-scotsman"
-const titleToSlug = {};
-manifest.forEach(article => {
-  titleToSlug[article.title.toLowerCase()] = article.slug;
-});
-
-export function resolveWikiLinks(markdown) {
-  return markdown.replace(/\[\[(.+?)\]\]/g, (match, title) => {
-    const slug = titleToSlug[title.toLowerCase()];
-    if (slug) {
-      return `[${title}](/${slug})`;
+// Converts [[Article Title]] into a markdown link, resolved against the manifest.
+// Falls back to a styled "missing link" if no matching article exists.
+export function resolveWikiLinks(content) {
+  return content.replace(/\[\[(.+?)\]\]/g, (match, title) => {
+    const found = manifest.find(
+      a => a.title.toLowerCase() === title.trim().toLowerCase()
+    );
+    if (found) {
+      return `[${title}](/${found.slug})`;
     }
-    // No match found — render as plain text with a marker class via span
-    return `*${title}*`;
+    return `*${title}*`; // no matching article yet — render as italic plain text
   });
 }
